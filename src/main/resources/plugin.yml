@@ -1,0 +1,8 @@
+name: CFCrashPlayer
+version: '${project.version}'
+main: ru.quizie.cfcrashplayer.CFCrashPlayer
+api-version: '1.16'
+depend:
+  - packetevents
+commands:
+  crash:
