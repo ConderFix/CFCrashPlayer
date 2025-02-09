@@ -1,5 +1,6 @@
 package ru.quizie.cfcrashplayer.commands;
 
+import lombok.AllArgsConstructor;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -10,13 +11,10 @@ import org.jetbrains.annotations.NotNull;
 import ru.quizie.cfcrashplayer.CFCrashPlayer;
 import ru.quizie.cfcrashplayer.crash.CrashManager;
 
+@AllArgsConstructor
 public class CrashCommand implements CommandExecutor {
 
     private final CrashManager crashManager;
-
-    public CrashCommand(CrashManager crashManager) {
-        this.crashManager = crashManager;
-    }
 
     private final String playerNotFound = ChatColor.RED + "Player not found!";
 

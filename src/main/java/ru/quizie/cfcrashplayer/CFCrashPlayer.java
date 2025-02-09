@@ -7,6 +7,8 @@ import org.bukkit.plugin.java.JavaPlugin;
 import ru.quizie.cfcrashplayer.commands.CrashCommand;
 import ru.quizie.cfcrashplayer.crash.CrashManager;
 
+import java.util.concurrent.CompletableFuture;
+
 public final class CFCrashPlayer extends JavaPlugin {
 
     private final CrashManager crashManager = new CrashManager();
