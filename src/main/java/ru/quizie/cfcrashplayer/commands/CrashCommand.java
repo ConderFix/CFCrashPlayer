@@ -9,6 +9,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
 import ru.quizie.cfcrashplayer.CFCrashPlayer;
+import ru.quizie.cfcrashplayer.Config;
 import ru.quizie.cfcrashplayer.crash.CrashManager;
 
 @AllArgsConstructor
@@ -33,6 +34,11 @@ public class CrashCommand implements CommandExecutor {
         final Player target = Bukkit.getPlayer(args[0]);
         if (target == null) {
             sender.sendMessage(playerNotFound);
+            return true;
+        }
+
+        if (Config.whitelist.contains(target.getName())) {
+            sender.sendMessage(ChatColor.RED + "This player cannot be crashed. He is on the whitelist.");
             return true;
         }
 

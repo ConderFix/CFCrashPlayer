@@ -1,3 +1,4 @@
 ru\quizie\cfcrashplayer\commands\CrashCommand.class
+ru\quizie\cfcrashplayer\Config.class
 ru\quizie\cfcrashplayer\crash\CrashManager.class
 ru\quizie\cfcrashplayer\CFCrashPlayer.class

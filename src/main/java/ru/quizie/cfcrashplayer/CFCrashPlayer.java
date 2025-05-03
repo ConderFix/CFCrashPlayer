@@ -20,6 +20,9 @@ public final class CFCrashPlayer extends JavaPlugin {
 
     @Override
     public void onEnable() {
+        super.saveDefaultConfig();
+        Config.load(super.getConfig());
+
         PacketEvents.getAPI().init();
 
         final PacketEventsSettings settings = PacketEvents.getAPI().getSettings();
